@@ -1,19 +1,32 @@
 {
-  "name": "mrp-api",
-  "version": "1.0.0",
-  "description": "MRP API",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PauloGasparSv/mrp-api.git"
-  },
-  "author": "Paulo Vale, Ettore Marques, Davi Tavares",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PauloGasparSv/mrp-api/issues"
-  },
-  "homepage": "https://github.com/PauloGasparSv/mrp-api#readme"
+	"name": "mrp-api",
+	"version": "1.0.0",
+	"description": "MRP API",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"format:check": "prettier --check .",
+		"format": "prettier --write .",
+		"lint:check": "eslint .",
+		"lint": "eslint --fix ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PauloGasparSv/mrp-api.git"
+	},
+	"author": "Paulo Vale, Ettore Marques, Davi Tavares",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/PauloGasparSv/mrp-api/issues"
+	},
+	"homepage": "https://github.com/PauloGasparSv/mrp-api#readme",
+	"dependencies": {
+		"koa": "^2.14.2"
+	},
+	"devDependencies": {
+		"eslint": "^8.54.0",
+		"eslint-config-prettier": "^9.0.0",
+		"prettier": "^3.1.0"
+	}
 }
