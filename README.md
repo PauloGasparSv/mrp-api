@@ -2,7 +2,9 @@
 
 ## Installation
 
-First install dependencies
+First, make a copy of the `.env.example` file called `.env` and fill in with real values.
+
+Then install dependencies
 
 ```sh
 npm install
