@@ -3,6 +3,7 @@ import Router from '@koa/router';
 import cors from '@koa/cors';
 import bodyParser from '@koa/bodyparser';
 import dotenv from 'dotenv';
+import helmet from 'koa-helmet';
 
 import errorHandlingMiddleware from './middlewares/error-handling.middleware.js';
 import responseTimeMiddleware from './middlewares/response-time.middleware.js';
@@ -22,6 +23,7 @@ api.use(
 		allowHeaders: ['Authorization', 'Content-Type', 'Accept'],
 	})
 )
+	.use(helmet())
 	.use(bodyParser())
 	.use(router.routes())
 	.use(errorHandlingMiddleware)
