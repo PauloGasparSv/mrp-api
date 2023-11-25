@@ -4,6 +4,7 @@ import cors from '@koa/cors';
 import bodyParser from '@koa/bodyparser';
 import dotenv from 'dotenv';
 
+import errorHandlingMiddleware from './middlewares/error-handling.middleware.js';
 import responseTimeMiddleware from './middlewares/response-time.middleware.js';
 import routes from './routes.js';
 
@@ -23,6 +24,7 @@ api.use(
 )
 	.use(bodyParser())
 	.use(router.routes())
+	.use(errorHandlingMiddleware)
 	.use(responseTimeMiddleware)
 	.use(router.allowedMethods());
 

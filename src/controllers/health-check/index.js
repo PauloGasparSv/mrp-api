@@ -1,7 +1,7 @@
-import Router from '@koa-router';
-import { healthCheck } from './health-check.controller';
+import Router from '@koa/router';
+import { healthCheck } from './health-check.controller.js';
 
-const router = new Router({ prefix: '' });
+const router = new Router();
 
 // Routes
 router.get('/', healthCheck);

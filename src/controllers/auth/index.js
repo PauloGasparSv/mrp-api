@@ -1,7 +1,7 @@
-import Router from '@koa-router';
-import { login } from './auth.controller';
+import Router from '@koa/router';
+import { login } from './auth.controller.js';
 
-const router = new Router({ prefix: 'auth' });
+const router = new Router();
 
 // Routes
 router.post('/login', login);
