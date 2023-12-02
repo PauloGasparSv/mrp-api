@@ -18,7 +18,7 @@ Then configure Husky
 npm run dev
 ```
 
-The API should be available on http://127.0.0.1:3000/
+The API should be available on http://127.0.0.1:5001/
 
 ## Scripts
 
