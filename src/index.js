@@ -9,7 +9,8 @@ import errorHandlingMiddleware from './middlewares/error-handling.middleware.js'
 import responseTimeMiddleware from './middlewares/response-time.middleware.js';
 import routes from './routes.js';
 
-if (process.env.NODE_ENV !== 'production') {
+const isProd = process.env.NODE_ENV === 'production';
+if (!isProd) {
 	dotenv.config();
 }
 
@@ -33,3 +34,10 @@ api.use(
 routes(api);
 
 api.listen(process.env.port ?? 5001);
+
+// eslint-disable-next-line no-console
+console.log(
+	`[index.js] Server is running at http://127.0.0.1:${
+		process.env.port ?? 5001
+	}`
+);
