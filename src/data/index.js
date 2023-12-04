@@ -1,4 +1,4 @@
-import KnexFile from './knexfile.js'
+import KnexFile from '../../knexfile.js'
 import knex from 'knex'
 
 
