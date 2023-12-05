@@ -14,7 +14,10 @@
 		"lint:check": "eslint .",
 		"lint": "eslint --fix .",
 		"fix": "prettier --write . && eslint --fix .",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"migration:make": "NODE_ENV=development knex migrate:make",
+		"migration:run": "NODE_ENV=development knex migrate:latest",
+		"migration:rollback": "NODE_ENV=development knex migrate:rollback"
 	},
 	"repository": {
 		"type": "git",
