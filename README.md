@@ -31,3 +31,9 @@ The API should be available on http://127.0.0.1:3000/
 `npm run lint:check`: Checks if code is linted correctly
 
 `npm run lint`: Lints all code
+
+## Migrations
+
+`npm run migration:make` Create a new migration
+`npm run migration:run` Update database with latest migration group
+`npm run migration:rollback` Rolls back the latest migration group
