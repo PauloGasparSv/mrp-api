@@ -1,4 +1,4 @@
-import knex from '../../data';
+import knex from '../../data/index.js';
 
 function healthCheck(ctx) {
 	ctx.body = {
